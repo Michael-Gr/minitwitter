@@ -26,11 +26,20 @@
             %span.icon-bar
             %span.icon-bar
           = link_to "#", class: "navbar-brand" do
-            Minitwitter
+            Home
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
-            %li.active
+            %li
               = link_to "Home", "#"
+            %li
+              = link_to new_tweet_path do
+                New Tweet
+            %li
+              = link_to "Moments", "#"
+            %li
+              = link_to "Search", "#"
+            %li
+              = link_to "Log in", "#"
     .container
       - flash.each do |name, msg|
         = content_tag :div, class: "alert alert-#{name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do
